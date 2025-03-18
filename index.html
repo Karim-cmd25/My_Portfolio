@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Ajout de Font Awesome pour les icônes -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- En-tête -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section">
+      <p>ARRAIS KARIM Developpeur FullStack</p>
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <p>
+        Je suis un développeur web passionné par la création de sites modernes
+        et performants.
+      </p>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section">
+      <h2 class="title-competences">Compétences</h2>
+      <ul>
+        <!-- HTML -->
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <!-- CSS -->
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <!-- JavaScript -->
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <!-- React -->
+        <li><i class="fab fa-react"></i> React</li>
+        <!-- Node.js -->
+        <li><i class="fab fa-node"></i> Node.js</li>
+        <!-- Git & GitHub -->
+        <li><i class="fab fa-github"></i> Git & GitHub</li>
+        <!-- MongoDB -->
+        <li><i class="fas fa-database"></i> MongoDB</li>
+      </ul>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+      <h2 class="title-projets">Mes Projets</h2>
+      <div class="projets">
+        <div class="projet">
+          <h3>Booki</h3>
+          <p>Site de location d'hébergement</p>
+        </div>
+        <div class="projet">
+          <h3>Mon vieux grimoire</h3>
+          <p>Développer le back-end d'un site de notation de livre.</p>
+        </div>
+        <div class="projet">
+          <h3>Kasa</h3>
+          <p>Créer une application web de location immobilière</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+      <h2>Contactez-moi</h2>
+      <form action="#" method="post">
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="Votre nom"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Votre email"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Votre message"
+          rows="4"
+          required
+        ></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+      <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
