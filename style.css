@@ -144,12 +144,23 @@ header nav ul li a {
   border: 2px solid transparent; /* Pas de contour par défaut */
   transition: border 0.3s ease; /* Transition douce pour le contour */
 }
+
 .projet:hover {
   border: 2px solid #333; /* Contour gris foncé lors du survol */
 }
+
 .projet h3 {
   margin-bottom: 10px;
   color: #333;
+}
+
+/* Enlever le soulignement des liens dans les titres des projets */
+.projets a {
+  text-decoration: none; /* Enlève le soulignement */
+}
+
+.projets a:hover {
+  text-decoration: underline; /* Si tu veux souligner au survol, tu peux l'ajouter */
 }
 
 #contact {
