@@ -11,11 +11,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-
     <!-- Ajout de Iconify pour l'icône MongoDB -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+
     <!-- En-tête -->
     <header>
       <nav>
@@ -75,7 +80,7 @@
             <h3>Booki</h3>
             <img src="images/booki.jpeg" alt="Booki" class="project-image" />
             <p>
-              Création d'un site statique de location d'hébergement responsive
+              Création d'un site statique de location d'hébergement responsive.
             </p>
           </a>
         </div>
@@ -89,7 +94,8 @@
             />
             <p>
               Développer le back-end d'un site de notation de livre. Permettre
-              l'authentification, l'ajout et la suppression de livres
+              l'authentification, l'ajout, la modification et suppression des
+              livres.
             </p>
           </a>
         </div>
@@ -109,7 +115,7 @@
     <!-- Section Contact -->
     <section id="contact" class="section">
       <h2>Contactez-moi</h2>
-      <form action="#" method="post">
+      <form id="contact-form">
         <input
           type="text"
           id="nom"
@@ -139,5 +145,8 @@
     <footer>
       <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
+
+    <!-- Lien vers le fichier JS -->
+    <script src="script.js"></script>
   </body>
 </html>
