@@ -144,7 +144,6 @@ header nav ul li a {
   border: 2px solid transparent; /* Pas de contour par défaut */
   transition: border 0.3s ease; /* Transition douce pour le contour */
 }
-
 .projet:hover {
   border: 2px solid #333; /* Contour gris foncé lors du survol */
 }
@@ -154,13 +153,13 @@ header nav ul li a {
   color: #333;
 }
 
-/* Enlever le soulignement des liens dans les titres des projets */
-.projets a {
-  text-decoration: none; /* Enlève le soulignement */
-}
-
-.projets a:hover {
-  text-decoration: underline; /* Si tu veux souligner au survol, tu peux l'ajouter */
+/* Stylisation de l'image dans la section projets */
+.project-image {
+  width: 100%; /* L'image occupe toute la largeur disponible */
+  max-width: 300px; /* Limite la taille maximale de l'image */
+  height: auto; /* Garde les proportions de l'image */
+  margin-top: 10px; /* Un peu d'espace au-dessus de l'image */
+  border-radius: 8px; /* Arrondir légèrement les coins de l'image */
 }
 
 #contact {
