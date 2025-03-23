@@ -1,13 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Sélectionnez le formulaire
+  const form = document.getElementById("contact-form");
+
+  // Ajoutez un écouteur d'événements pour l'envoi du formulaire
+  form.addEventListener("submit", sendMail);
+});
+
 function sendMail(event) {
   event.preventDefault(); // Empêche la soumission du formulaire
 
+  // Récupérer les valeurs des champs du formulaire
   let params = {
-    name: document.getElementById("name").value,
+    name: document.getElementById("nom").value,
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
   };
 
-  // Envoi de l'email via EmailJS
+  // Envoyer l'email via EmailJS
   emailjs.send("service_e3fe6lg", "template_1yq4d6k", params).then(
     function (response) {
       alert("Mail envoyé avec succès !");
@@ -18,4 +27,4 @@ function sendMail(event) {
       console.error("Erreur:", error);
     }
   );
-} // Assurez-vous que cette accolade est là pour fermer la fonction.
+}
