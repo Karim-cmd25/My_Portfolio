@@ -17,12 +17,19 @@ document
     // Afficher les données du formulaire dans la console pour vérifier
     console.log("Données du formulaire envoyées:", formData);
 
+    // Vérifier que les données sont correctement récupérées
+    if (!formData.nom || !formData.email || !formData.message) {
+      console.error("Données du formulaire incomplètes.");
+      alert("Veuillez remplir tous les champs.");
+      return;
+    }
+
     // Envoi de l'email via EmailJS
     emailjs.send("service_e3fe6lg", "template_u00w4co", formData).then(
       function (response) {
         // Si l'email est envoyé avec succès
-        alert("Message envoyé avec succès !");
         console.log("Réponse EmailJS:", response);
+        alert("Message envoyé avec succès !");
       },
       function (error) {
         // Si une erreur survient
