@@ -1,27 +1,32 @@
-// Initialisation d'EmailJS avec ton ID utilisateur
-emailjs.init("user_e3fe6lg"); // Remplace par ton propre User ID
+// Initialiser EmailJS avec ton ID utilisateur
+emailjs.init("user_e3fe6lg"); // Remplace avec ton ID utilisateur si nécessaire
 
-// Écouteur d'événement sur le formulaire
+// Ajouter un événement au formulaire pour l'envoi
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche la page de se recharger
+    event.preventDefault(); // Empêche la page de se recharger après l'envoi du formulaire
 
     // Récupérer les données du formulaire
     var formData = {
-      nom: document.getElementById("nom").value, // Nom de l'utilisateur
-      email: document.getElementById("email").value, // Email de l'utilisateur
-      message: document.getElementById("message").value, // Message de l'utilisateur
+      nom: document.getElementById("nom").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
     };
+
+    // Afficher les données du formulaire dans la console pour vérifier
+    console.log("Données du formulaire envoyées:", formData);
 
     // Envoi de l'email via EmailJS
     emailjs.send("service_e3fe6lg", "template_u00w4co", formData).then(
       function (response) {
+        // Si l'email est envoyé avec succès
         alert("Message envoyé avec succès !");
         console.log("Réponse EmailJS:", response);
       },
       function (error) {
-        console.error("Erreur lors de l'envoi de l'email:", error);
+        // Si une erreur survient
+        console.error("Erreur lors de l'envoi de l'email:", error); // Affiche les détails de l'erreur
         alert("Échec de l'envoi, veuillez réessayer plus tard.");
       }
     );
