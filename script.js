@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM chargé");
+  event.preventDefault(); // Empêche la soumission du formulaire
+  console.log("Formulaire soumis, empêche la soumission par défaut");
 
   // Sélectionnez le formulaire
   const form = document.getElementById("contact-form");
@@ -27,9 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function sendMail(event) {
   console.log("sendMail appelé");
-
-  event.preventDefault(); // Empêche la soumission du formulaire
-  console.log("Formulaire soumis, empêche la soumission par défaut");
 
   // Récupérer les valeurs des champs du formulaire
   let params = {
