@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM chargé");
-  event.preventDefault(); // Empêche la soumission du formulaire
+
   console.log("Formulaire soumis, empêche la soumission par défaut");
 
   // Sélectionnez le formulaire
   const form = document.getElementById("contact-form");
 
   // écouteur d'événements pour l'envoi du formulaire
-  form.addEventListener("submit", sendMail);
+  form.addEventListener("submit", (e) => sendMail(e));
 
   console.log("Écouteur d'événements ajouté au formulaire");
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function sendMail(event) {
   console.log("sendMail appelé");
-
+  event.preventDefault();
   // Récupérer les valeurs des champs du formulaire
   let params = {
     name: document.getElementById("nom").value,
