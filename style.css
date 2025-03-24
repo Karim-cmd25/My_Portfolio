@@ -53,6 +53,11 @@ header nav ul li a {
   background: #fff;
 }
 
+.modal_content h1 a {
+  text-decoration: none; /* Supprimer le soulignement */
+  color: black;
+}
+
 #competences ul {
   display: flex;
   justify-content: space-between;
