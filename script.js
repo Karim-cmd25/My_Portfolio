@@ -2,8 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sélectionnez le formulaire
   const form = document.getElementById("contact-form");
 
-  // Ajoutez un écouteur d'événements pour l'envoi du formulaire
+  // écouteur d'événements pour l'envoi du formulaire
   form.addEventListener("submit", sendMail);
+
+  // Ajouter l'événement pour fermer la modale lorsque l'on clique en dehors
+  const modal = document.getElementById("demo"); // Sélectionne la modale
+  const modalContent = modal.querySelector(".modal_content"); // Sélectionne le contenu de la modale
+
+  // Lorsque l'utilisateur clique en dehors de la modale, la fermer
+  modal.addEventListener("click", function (event) {
+    // Vérifie si le clic s'est produit en dehors du contenu de la modale
+    if (!modalContent.contains(event.target)) {
+      modal.style.visibility = "hidden";
+      modal.style.opacity = "0";
+    }
+  });
 });
 
 function sendMail(event) {

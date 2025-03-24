@@ -13,18 +13,6 @@
     />
     <!-- Ajout de Iconify pour l'icône MongoDB -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "mBw1Y-S1aj0mwsVpB",
-        });
-      })();
-    </script>
   </head>
   <body>
     <!-- En-tête -->
@@ -64,7 +52,6 @@
         <li><i class="fab fa-node"></i> Node.js</li>
         <!-- Git & GitHub -->
         <li><i class="fab fa-github"></i> Git & GitHub</li>
-
         <!-- Icône MongoDB -->
         <li>
           <span
@@ -80,8 +67,9 @@
     <section id="projets" class="section">
       <h2 class="title-projets">Mes Projets</h2>
       <div class="projets">
+        <!-- Projet 1 -->
         <div class="projet">
-          <a href="https://github.com/Karim-cmd25/k_booki" target="_blank">
+          <a href="#modal-booki" class="open-modal">
             <h3>Booki</h3>
             <img src="images/booki.jpeg" alt="Booki" class="project-image" />
             <p>
@@ -89,8 +77,10 @@
             </p>
           </a>
         </div>
+
+        <!-- Projet 2 -->
         <div class="projet">
-          <a href="https://github.com/Karim-cmd25/projet_6-" target="_blank">
+          <a href="#modal-grimoire" class="open-modal">
             <h3>Mon vieux grimoire</h3>
             <img
               src="images/grimoire.jpeg"
@@ -104,8 +94,10 @@
             </p>
           </a>
         </div>
+
+        <!-- Projet 3 -->
         <div class="projet">
-          <a href="https://github.com/Karim-cmd25/Kasaa" target="_blank">
+          <a href="#modal-kasa" class="open-modal">
             <h3>Kasa</h3>
             <img src="images/kasa.jpeg" alt="kasa" class="project-image" />
             <p>
@@ -143,16 +135,51 @@
           required
         ></textarea>
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" onclick="sendMail()">Envoyer</button>
       </form>
     </section>
+
+    <!-- Modales -->
+    <div id="modal-booki" class="modal">
+      <div class="modal_content">
+        <h1>Booki</h1>
+        <p>Création d'un site statique de location d'hébergement responsive.</p>
+        <a href="#" class="modal_close">&times;</a>
+      </div>
+    </div>
+
+    <div id="modal-grimoire" class="modal">
+      <div class="modal_content">
+        <h1>Mon vieux grimoire</h1>
+        <p>
+          Développer le back-end d'un site de notation de livre. Développer le
+          back-end d'un site de notation de livre. Développer le back-end d'un
+          site de notation de livre. Développer le back-end d'un site de
+          notation de livre. Développer le back-end d'un site de notation de
+          livre. Développer le back-end d'un site de notation de livre.
+        </p>
+        <a href="#" class="modal_close">&times;</a>
+      </div>
+    </div>
+
+    <div id="modal-kasa" class="modal">
+      <div class="modal_content">
+        <h1>Kasa</h1>
+        <p>
+          Créer une application web de location immobilière dynamique avec
+          React. Difficultés :
+        </p>
+        <a href="#" class="modal_close">&times;</a>
+      </div>
+    </div>
 
     <!-- Pied de page -->
     <footer>
       <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
     </footer>
+
     <script>
-      src = "script.js";
+      // Vous pouvez inclure des scripts JS ici si nécessaire
     </script>
   </body>
 </html>
