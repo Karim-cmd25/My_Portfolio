@@ -30,7 +30,7 @@ function sendMail(event) {
   };
 
   // Envoyer l'email via EmailJS
-  emailjs.send("service_e3fe6lg", "template_u00w4co", params).then(
+  emailjs.send("service_e3fe6lg", "template_m9dr73k", params).then(
     function (response) {
       alert("Mail envoyé avec succès !");
       console.log("Succès:", response);
